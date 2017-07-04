@@ -164,3 +164,8 @@ body a {
   font-weight: lighter;
   color: #88f933;
 }
+
+.carousel-inner{
+  display: flex;
+  justify-content: center;
+}
