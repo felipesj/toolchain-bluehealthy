@@ -184,3 +184,14 @@ body a {
   display: flex !important;
   align-items: baseline !important;
 }
+
+.alert-msg{
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
+}

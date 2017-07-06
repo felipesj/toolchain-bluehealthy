@@ -15,7 +15,7 @@
     </a>
   </div>
   <div class="right">
-    <button type="button" class="btn" onclick="signUp()">Sign up</button>
+    <button id="sign-up-pre" type="button" class="btn" onclick="signUp()">Sign up</button>
   </div>
 </div>
 <div class="content">
@@ -57,23 +57,23 @@
       <div class="button-container" >
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn">Caminhada</button>
+          <button type="button" class="btn" onclick="registerActivity()">Caminhada</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn">Corrida</button>
+          <button type="button" class="btn" onclick="registerActivity()">Corrida</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn">Natação</button>
+          <button type="button" class="btn" onclick="registerActivity()">Natação</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn">Musculação</button>
+          <button type="button" class="btn" onclick="registerActivity()">Musculação</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn">Outro</button>
+          <button type="button" class="btn" onclick="registerActivity()">Outro</button>
         </div>        
       </div>
     </div>
@@ -100,10 +100,24 @@
   </a>
 </div>
 </div>
+<div id="activity-sucess-msg" class="alert-msg">
+  <div class="left">  
+    <div class="alert alert-success" role="alert">Registro efetuado com sucesso</div>
+  </div>
+  <div class="right">
+    <button id="sign-up-pos" type="button" class="btn" onclick="signUpAfterActivity()">Sign up</button>
+  </div>
+</div>  
 
 <script>
-  function signUp() {
-    console.log ('sign up!!');
+  function SignUp() {
+    console.log('sign up do header');
+  }
+  function signUpAfterActivity() {
+    console.log('sign up depois de registrar atividade');
+  }
+  function registerActivity() {
+    $( "#activity-sucess-msg" ).addClass( "visible" );
   }
 </script>
 
