@@ -57,23 +57,23 @@
       <div class="button-container" >
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">Caminhada</button>
+          <button type="button" class="btn" onclick="registerActivity()">*Caminhada</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">Corrida</button>
+          <button type="button" class="btn" onclick="registerActivity()">*Corrida</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">Natação</button>
+          <button type="button" class="btn" onclick="registerActivity()">*Natação</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">Musculação</button>
+          <button type="button" class="btn" onclick="registerActivity()">*Musculação</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">Outro</button>
+          <button type="button" class="btn" onclick="registerActivity()">*Outro</button>
         </div>        
       </div>
     </div>
@@ -112,11 +112,15 @@
 <script>
   function signUp() {
     console.log('sign up do header');
+    ga('send', 'event', 'Sign up do header');
   }
   function signUpAfterActivity() {
     console.log('sign up depois de registrar atividade');
+    ga('send', 'event', 'Sign up do depois de registrar atividade');
   }
   function registerActivity() {
+    console.log('Atividade registrada');
+    ga('send', 'event', 'Atividade registrada');
     $( "#activity-sucess-msg" ).addClass( "visible" );
   }
 </script>
