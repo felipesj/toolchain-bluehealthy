@@ -179,3 +179,19 @@ body a {
     flex-direction: column;
     width: 200px;
 }
+
+.input-group{
+  display: flex !important;
+  align-items: baseline !important;
+}
+
+.alert-msg{
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
+}
