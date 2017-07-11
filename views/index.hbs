@@ -5,6 +5,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="javascripts/main.js"></script>
 
 
 <div class="header">
@@ -15,7 +16,7 @@
     </a>
   </div>
   <div class="right">
-    <button id="sign-up-pre" type="button" class="btn" onclick="signUp()">Sign up</button>
+    <button id="sign-up-pre" type="button" class="btn" onclick="signUpClick()">Sign up</button>
   </div>
 </div>
 <div class="content">
@@ -57,23 +58,23 @@
       <div class="button-container" >
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">*Caminhada</button>
+          <button type="button" class="btn" onclick="registerActivityClick()">*Caminhada</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">*Corrida</button>
+          <button type="button" class="btn" onclick="registerActivityClick()">*Corrida</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">*Natação</button>
+          <button type="button" class="btn" onclick="registerActivityClick()">*Natação</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">*Musculação</button>
+          <button type="button" class="btn" onclick="registerActivityClick()">*Musculação</button>
         </div>        
         <div class="input-group">
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-          <button type="button" class="btn" onclick="registerActivity()">*Outro</button>
+          <button type="button" class="btn" onclick="registerActivityClick()">*Outro</button>
         </div>        
       </div>
     </div>
@@ -105,21 +106,21 @@
     <div class="alert alert-success" role="alert">Registro efetuado com sucesso</div>
   </div>
   <div class="right">
-    <button id="sign-up-pos" type="button" class="btn" onclick="signUpAfterActivity()">Sign up</button>
+    <button id="sign-up-pos" type="button" class="btn" onclick="signUpAfterActivityClick()">Sign up</button>
   </div>
 </div>  
 
 <script>
-  function signUp() {
-    console.log('sign up do header');
+  function signUpClick() {
+    signUp();
     ga('send', 'event', 'Sign up do header');
   }
-  function signUpAfterActivity() {
-    console.log('sign up depois de registrar atividade');
+  function signUpAfterActivityClick() {
+    signUpAfterActivity();
     ga('send', 'event', 'Sign up do depois de registrar atividade');
   }
-  function registerActivity() {
-    console.log('Atividade registrada');
+  function registerActivityClick() {
+    registerActivity();
     ga('send', 'event', 'Atividade registrada');
     $( "#activity-sucess-msg" ).addClass( "visible" );
   }

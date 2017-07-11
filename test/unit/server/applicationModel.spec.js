@@ -24,6 +24,7 @@ var rewire_revert = false;
 describe('Application Model', function() {
 
   var applicationModel = rewire('../../../api/models/application');
+  var uiFunctions = rewire('../../../public/javascripts/main');
 
   before(function() {
     // mock DB results using rewire
@@ -54,5 +55,27 @@ describe('Application Model', function() {
         expect(apps.id).to.equal(8888);
       });
     });
+
+    describe("#signUp", function() {
+      it("return success when clicking on sign up (header)", function() {
+        var result = uiFunctions.signUp();
+        expect(result).to.equal(true);
+      });
+    });
+
+    describe("#signUpAfterActivity", function() {
+      it("return success when clicking on sign up (after registering an activity)", function() {
+        var result = uiFunctions.signUpAfterActivity();
+        expect(result).to.equal(true);
+      });
+    });
+
+    describe("#registerActivity", function() {
+      it("return success when clicking on register for an activity", function() {
+        var result = uiFunctions.registerActivity();
+        expect(result).to.equal(true);
+      });
+    });
+
   });
 });
